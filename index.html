@@ -73,7 +73,7 @@
         <div id="container">
             <div id="infoDiv2"></div>
         </div>
-        <div id="map"></div>        </div>
+        <div id="map"></div> 
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
         <script src="js/L.Control.Layers.Tree.min.js"></script>
@@ -138,10 +138,6 @@
                         <td>' + (feature.properties['name'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">FILIAL</th>\
-                        <td>' + (feature.properties['FILIAL'] !== null ? autolinker.link(feature.properties['FILIAL'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">FREQUENCIA</th>\
                         <td>' + (feature.properties['FREQUENCIA'] !== null ? autolinker.link(feature.properties['FREQUENCIA'].toLocaleString()) : '') + '</td>\
                     </tr>\
@@ -150,12 +146,16 @@
                         <td>' + (feature.properties['HORARIO'] !== null ? autolinker.link(feature.properties['HORARIO'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <th scope="row">TURNO</th>\
+                        <td>' + (feature.properties['TURNO'] !== null ? autolinker.link(feature.properties['TURNO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
                         <th scope="row">OPERACAO</th>\
                         <td>' + (feature.properties['OPERACAO'] !== null ? autolinker.link(feature.properties['OPERACAO'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">TURNO</th>\
-                        <td>' + (feature.properties['TURNO'] !== null ? autolinker.link(feature.properties['TURNO'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">FILIAL</th>\
+                        <td>' + (feature.properties['FILIAL'] !== null ? autolinker.link(feature.properties['FILIAL'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
